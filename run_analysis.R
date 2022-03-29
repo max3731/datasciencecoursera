@@ -64,6 +64,6 @@ names(extract_features)<-gsub("gravity", "Gravity", names(extract_features))
 
 data_UCI <- extract_features %>% group_by(subjects, Activity) %>% summarise_all(funs(mean))
 write.table(data_UCI, "data_UCI.txt", row.name=FALSE)
-str(data_UCI)
+
 
 
