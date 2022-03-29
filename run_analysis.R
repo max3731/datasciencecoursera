@@ -62,7 +62,7 @@ names(extract_features)<-gsub("gravity", "Gravity", names(extract_features))
 
 ### Tidy data set with the average of each variable for each activity and each subject.
 
-data_UCI <- extract_features %>% group_by(subjects, activity) %>% summarise_all(funs(mean))
+data_UCI <- extract_features %>% group_by(subjects, Activity) %>% summarise_all(funs(mean))
 write.table(data_UCI, "data_UCI.txt", row.name=FALSE)
 str(data_UCI)
 
