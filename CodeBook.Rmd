@@ -54,7 +54,7 @@ y_train = read.table("./data/Dataset/train/y_train.txt", col.names = "Coding")
 
 ## Third Step
 
-Merging x, y and subject frames in one data frame and extract mean and std
+Merging x, y and subject frames in one data frame and extract mean and std, resulting 86 were identified to match "mean" and "std"
 
 ```
 
@@ -92,13 +92,12 @@ names(extract_features)<-gsub("gravity", "Gravity", names(extract_features))
 
 ## Fifth step 
 
-Creating data frame 
+Creating data frame as txt file
 
 ```
 
 data_UCI <- extract_features %>% group_by(subjects, activity) %>% summarise_all(funs(mean))
 write.table(data_UCI, "data_UCI.txt", row.name=FALSE)
-str(data_UCI)
 
 ```
 
