@@ -1,4 +1,4 @@
-Aufgabe
+##Aufgabe
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./data/Dataset.zip",method="curl")
@@ -53,7 +53,7 @@ names(extract_features)<-gsub("BodyBody", "Body", names(extract_features))
 names(extract_features)<-gsub("Mag", "Magnitude", names(extract_features))
 names(extract_features)<-gsub("^t", "Time", names(extract_features))
 names(extract_features)<-gsub("^f", "Frequency", names(extract_features))
-names(extract_features)<-gsub("tBody", "TimeBody", names(extract_features))
+names(extract_features)<-gsub("tBody", "Time Body", names(extract_features))
 names(extract_features)<-gsub("-mean()", "Mean", names(extract_features), ignore.case = TRUE)
 names(extract_features)<-gsub("-std()", "Sandard Deviation", names(extract_features), ignore.case = TRUE)
 names(extract_features)<-gsub("-freq()", "Frequency", names(extract_features), ignore.case = TRUE)
