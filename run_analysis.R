@@ -12,7 +12,7 @@ library("data.table")
 library("reshape2")
 library("dplyr")
 
-labels = read.table("./data/Dataset/activity_labels.txt", header = FALSE, sep = "", dec = ".")[,2]
+#labels = read.table("./data/Dataset/activity_labels.txt", header = FALSE, sep = "", dec = ".")[,2]
 
 
 
